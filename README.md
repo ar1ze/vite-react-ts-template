@@ -16,6 +16,12 @@ This is opinionated. Use what works for you, ignore the rest, and stay consisten
 - **TypeScript** for type safety
 - **Tailwind CSS** for styling
 
+### Testing
+
+- **Vitest** for unit and integration tests
+- **React Testing Library** for component testing
+- **jsdom** for browser environment simulation
+
 ### Architecture
 
 - Organized folder structure (`app`, `features`, `components`)
@@ -48,6 +54,8 @@ npm run dev      # Start development server
 npm run build    # Build for production
 npm run lint     # Run ESLint
 npm run preview  # Preview production build
+npm test         # Run tests
+npm run test:ui  # Run tests with UI
 ```
 
 ## Project Conventions
@@ -66,6 +74,13 @@ All files and folders in `src` must be **kebab-case** (e.g., `theme-toggle.tsx`)
 - **File:** `theme-toggle.tsx`
 - **Component:** `export function ThemeToggle() {...}`
 
+### Testing
+
+Test files use the `.test.tsx` or `.test.ts` extension and follow the same kebab-case convention.
+
+- **Test file:** `theme-toggle.test.tsx`
+- **Location:** Co-located with the component or in `__tests__` folders
+
 ### Commit Convention
 
 Uses [Conventional Commits](https://www.conventionalcommits.org/). First line must be lowercase.
@@ -75,6 +90,7 @@ Examples:
 - `feat: add new button component`
 - `fix: resolve styling issue on mobile`
 - `chore: update dependencies`
+- `test: add tests for theme toggle`
 
 ## Credits
 

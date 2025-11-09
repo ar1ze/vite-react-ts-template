@@ -9,6 +9,7 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import checkFile from 'eslint-plugin-check-file'
 
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import vitest from 'eslint-plugin-vitest'
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -16,6 +17,7 @@ export default defineConfig([
     plugins: {
       'simple-import-sort': simpleImportSort,
       'check-file': checkFile,
+      vitest: vitest,
     },
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -45,6 +47,15 @@ export default defineConfig([
         'error',
         { 'src/**/!(__tests__)': 'KEBAB_CASE' },
       ],
+    },
+  },
+
+  // Vitest-specific rules for test files
+  {
+    files: ['**/*.test.{ts,tsx}'], // Apply only to test files
+    ...vitest.configs.recommended,
+    rules: {
+      // any specific test rule overrides
     },
   },
 
