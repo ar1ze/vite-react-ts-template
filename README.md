@@ -1,6 +1,6 @@
 # Vite React TypeScript Template
 
-My personal starter for React projects with Vite and TypeScript. Includes all the tooling I use (ESLint, Prettier, Tailwind, Husky) and a scalable folder structure so I don't have to set everything up from scratch each time.
+A minimal starter template for React projects. Pre-configured with Vite, TypeScript, ESLint, and Prettier.
 
 Clone it and start building.
 
@@ -50,12 +50,44 @@ npm run dev
 ## Scripts
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run lint     # Run ESLint
-npm run preview  # Preview production build
-npm test         # Run tests
-npm run test:ui  # Run tests with UI
+npm run dev         # Start development server
+npm run build       # Build for production
+npm run lint        # Run ESLint
+npm run preview     # Preview production build locally
+npm test            # Run tests
+npm run test:ui     # Run tests with UI
+```
+
+## Deployment
+
+### GitHub Pages
+
+1. **Update the base path** in `.github/workflows/deploy.yml`:
+
+```yaml
+- name: Build
+  run: npm run build
+  env:
+    VITE_BASE_PATH: /your-repo-name/
+```
+
+2. **Enable GitHub Pages** in your repository:
+   - Go to Settings → Pages
+   - Source: GitHub Actions
+
+3. **Push to main branch** - deployment happens automatically
+
+4. **Your site will be live at:** `https://your-username.github.io/your-repo-name/`
+
+### Vercel / Netlify
+
+No configuration needed! Just connect your repository and deploy.
+
+### Local Preview
+
+```bash
+npm run build
+npm run preview
 ```
 
 ## Project Conventions
