@@ -1,7 +1,6 @@
 # Vite React TypeScript Template
 
-A minimal starter template for React projects. Pre-configured with Vite, TypeScript, ESLint, and Prettier.
-
+A starter template for React projects. Pre-configured with Vite, TypeScript, ESLint, and Prettier.
 Clone it and start building.
 
 ## Disclaimer
@@ -41,8 +40,8 @@ This is opinionated. Use what works for you, ignore the rest, and stay consisten
 ## Quick Start
 
 ```bash
-git clone <your-repo-url>
-cd your-project
+git clone <your-repo-url> my-project
+cd my-project
 npm install
 npm run dev
 ```
