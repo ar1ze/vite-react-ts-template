@@ -5,7 +5,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
-  base: process.env.VITE_BASE_PATH || '/',
+  base: process.env.VITE_BASE_URL || '/',
   build: {
     outDir: 'dist',
     sourcemap: false,
